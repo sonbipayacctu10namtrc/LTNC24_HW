@@ -7,7 +7,7 @@ string timeConversion(string s) {
     if (s.substr(8, 2) == "AM"){
         if (a >= 12){
             a -= 12;
-            s[0] = '0', s[1] = (char) (a - '0');
+            s = '0' + to_string(a) + s.substr(2);
         }
     }
     else{
